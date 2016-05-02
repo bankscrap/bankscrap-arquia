@@ -1,6 +1,6 @@
 # Bankscrap::Arquia
 
-Bankscrap adapter for [Arquia Banca](https://www.arquia.es/) (only tested with personal accounts).
+[Bankscrap](https://github.com/bankscrap/bankscrap) adapter for [Arquia Banca](https://www.arquia.es/) (only tested with personal accounts).
 
 
 ## Installation
