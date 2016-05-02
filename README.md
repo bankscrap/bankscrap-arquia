@@ -37,8 +37,6 @@ For more details on usage instructions please read [Bankscrap readme](https://gi
 
 ### From Ruby code
 
-**TODO**: check if your bank adapter needs more extra_args for the initializer.
-
 ```ruby
 require 'bankscrap-arquia'
 arquia = Bankscrap::Arquia::Bank.new(YOUR_USER, YOUR_PASSWORD, extra_args: {nif: YOUR_NIF})
