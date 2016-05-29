@@ -13,25 +13,20 @@ module Bankscrap
       PRODUCTS_ENDPOINT = '/api/products'.freeze
       ACCOUNTS_ENDPOINT = '/api/accounts'.freeze
 
-      def initialize(user, password, log: false, debug: false, extra_args: nil)
-        @user = user
-        @password = password
-        @log = log
-        @debug = debug
-        @nif = extra_args.with_indifferent_access['nif'].dup.upcase
+      REQUIRED_CREDENTIALS  = [:user, :password, :nif]
 
-        initialize_connection
+      def initialize(credentials = {})
+        super do
+          @nif = @nif.dup.upcase
 
-        add_headers(
-          'Authorization' => 'Bearer',
-          'api-version' => '2',
-          'Content-Type' => 'application/json; charset=utf-8',
-          'Host' =>  'api.arquia.es',
-          'User-Agent' => ''
-        )
-
-        login
-        super
+          add_headers(
+            'Authorization' => 'Bearer',
+            'api-version' => '2',
+            'Content-Type' => 'application/json; charset=utf-8',
+            'Host' =>  'api.arquia.es',
+            'User-Agent' => ''
+          )
+        end
       end
 
       # Fetch all the accounts for the given user
