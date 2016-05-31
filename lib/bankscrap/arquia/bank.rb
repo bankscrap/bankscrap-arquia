@@ -115,11 +115,10 @@ module Bankscrap
           bank: self,
           id: data['numProd'],
           name: data['description'],
-          available_balance: data['availableBalance'],
-          balance: data['balance'],
-          currency: 'EUR',
+          available_balance: Money.new(data['availableBalance'] * 100, 'EUR'),
+          balance: Money.new(data['balance'] * 100, 'EUR'),
           iban: data['iban']['ibanCode'],
-          description: data['description']
+          description: "ARQUIA: #{data['description']}"
         )
       end
 
@@ -131,7 +130,6 @@ module Bankscrap
           amount: Money.new(data['amount'].to_f * 100, 'EUR'),
           description: data['description'],
           effective_date: data['valueDate'].to_date, # Format is 2016-05-02T00:00:00
-          currency: 'EUR', # We only know the API returns data['currency'] == 0 for EUR
           balance: Money.new(data['balance'].to_f * 100, 'EUR')
         )
       end
