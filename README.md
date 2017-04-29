@@ -24,12 +24,12 @@ Or install it yourself as:
 ### From terminal
 #### Bank account balance
 
-    $ bankscrap balance Arquia --user YOUR_USER --password YOUR_PASSWORD --extra=nif:YOUR_NIF
+    $ bankscrap balance Arquia --credentials=user:YOUR_USER nif:YOUR_DNI password:YOUR_PASSWORD
 
 
 #### Transactions
 
-    $ bankscrap transactions Arquia --user YOUR_USER --password YOUR_PASSWORD --extra=nif:YOUR_NIF
+    $ bankscrap transactions Arquia --credentials=user:YOUR_USER nif:YOUR_DNI password:YOUR_PASSWORD
 
 ---
 
@@ -39,7 +39,7 @@ For more details on usage instructions please read [Bankscrap readme](https://gi
 
 ```ruby
 require 'bankscrap-arquia'
-arquia = Bankscrap::Arquia::Bank.new(YOUR_USER, YOUR_PASSWORD, extra_args: {nif: YOUR_NIF})
+arquia = Bankscrap::Arquia::Bank.new(user: YOUR_USER, nif: YOUR_NIF, password: YOUR_PASSWORD)
 ```
 
 
