@@ -2,6 +2,7 @@
 
 [Bankscrap](https://github.com/bankscrap/bankscrap) adapter for [Arquia Banca](https://www.arquia.es/) (only tested with personal accounts).
 
+Contact: open an issue or email us at bankscrap@protonmail.com.
 
 ## Installation
 
