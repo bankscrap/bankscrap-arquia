@@ -44,7 +44,7 @@ GEM
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     ntlm-http (0.1.1)
-    rake (10.5.0)
+    rake (13.0.1)
     thor (0.19.4)
     thread_safe (0.3.6)
     tzinfo (1.2.3)
@@ -60,7 +60,7 @@ PLATFORMS
 DEPENDENCIES
   bankscrap-arquia!
   bundler (~> 1.7)
-  rake (~> 10.0)
+  rake (~> 13.0)
 
 BUNDLED WITH
    1.13.6
